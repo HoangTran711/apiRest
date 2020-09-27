@@ -1,22 +1,24 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const locationSchema = new Schema({
-    type:{
-        type:String,
-        required:true
+const locationSchema = new Schema(
+    {
+    type: {
+        type: String,
     },
-    id:{
-        type:Number,
-        required:true
+    properties: {
+        id: Number,
+        name: String,
+        description: String,
+        icon: String,
+        qty_search: Number,
+        iconSize: Number,
     },
-    properties:{
-        type:Object,
-        required:true
+    geometry: {
+        coordinates: Array,
+        type: String,
     },
-    geometry:{
-        type:Object,
-        required:true
-    }
-},{timestamps:true});
+    },
+    { timestamps: true }
+);
 module.exports = mongoose.model("Location",locationSchema);
