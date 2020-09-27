@@ -16,8 +16,10 @@ const locationSchema = new Schema(
     },
     geometry: {
         coordinates: Array,
-        type: String,
-    },
+        type: {
+            type: String,
+        },
+        },
     },
     { timestamps: true }
 );
