@@ -8,4 +8,6 @@ router.delete('/:locationId',locationController.deleteLocation);
 router.get('/:locationId',locationController.getOne);
 router.post('/updateQuantity/',locationController.updateQuantity);
 
+
+
 module.exports = router
